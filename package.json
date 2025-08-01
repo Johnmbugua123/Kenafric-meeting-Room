@@ -1,0 +1,25 @@
+{
+  "name": "kenafric-meeting-room-booking",
+  "version": "1.0.0",
+  "description": "Meeting Room Booking System for Kenafric Manufacturing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend && npm install",
+    "install-all": "npm install && npm run backend:install && npm run frontend:install",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "node test-system.js",
+    "setup": "npm run install-all && cd backend && npm run init-db"
+  },
+  "keywords": ["meeting", "booking", "room", "management", "kenafric"],
+  "author": "Kenafric IT Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "chalk": "^4.1.2"
+  }
+}
